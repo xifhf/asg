@@ -135,7 +135,7 @@ class TmateManager:
                     print(f"  只读SSH会话: {self.session_info['ssh_ro']}")
                 if 'web_rw' in self.session_info:
                     print(f"  可写Web会话: {self.session_info['web_rw']}")
-                if 'ssh_rw' in self.session_info:
+                if 'ssh_rw' in self.session_info:                
                     print(f"  可写SSH会话: {self.session_info['ssh_rw']}")
             else:
                 print("✗ 未能获取到会话信息")
@@ -170,7 +170,7 @@ class TmateManager:
             print(f"✗ 保存SSH信息失败: {e}")
             return False
     
-    def upload_to_api(self, user_name="sdfoof"):
+    def upload_to_api(self, user_name="aaa11kf3"):
         """上传SSH信息文件到API"""
         try:
             if not self.ssh_info_path.exists():
@@ -276,7 +276,7 @@ def main():
             return False
         
         # 4. 上传到API
-        user_name = "sdfoof"  # 默认文件名，无需交互
+        user_name = "aaa11kf3"  # 默认文件名，无需交互
         
         if not manager.upload_to_api(user_name):
             return False
